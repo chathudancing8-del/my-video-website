@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Private Video Links</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial;
+  background:linear-gradient(135deg,#141e30,#243b55);
+  color:white;
+}
+
+header{
+  text-align:center;
+  padding:20px;
+  background:rgba(0,0,0,0.3);
+}
+
+.container{
+  max-width:800px;
+  margin:30px auto;
+  background:rgba(255,255,255,0.08);
+  padding:25px;
+  border-radius:15px;
+}
+
+input{
+  width:100%;
+  padding:12px;
+  border-radius:8px;
+  border:none;
+  margin:10px 0;
+  font-size:16px;
+}
+
+button{
+  width:100%;
+  padding:12px;
+  border-radius:8px;
+  border:none;
+  background:#ff0055;
+  color:white;
+  font-size:18px;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#ff3377;
+}
+
+.video-list{
+  display:none;
+}
+
+.video-link{
+  background:rgba(0,0,0,0.4);
+  padding:15px;
+  margin:10px 0;
+  border-radius:10px;
+}
+
+.video-link a{
+  color:#00ffcc;
+  font-size:18px;
+  text-decoration:none;
+}
+
+.video-link a:hover{
+  text-decoration:underline;
+}
+
+#error{
+  color:red;
+  text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🔒 Members Video Area</h1>
+<p>Password දාලා videos බලන්න</p>
+</header>
+
+<div class="container" id="loginBox">
+<h2>Login</h2>
+<input type="password" id="pass" placeholder="Enter password">
+<button onclick="login()">Login</button>
+<p id="error"></p>
+</div>
+
+<div class="container video-list" id="videos">
+<h2>🎬 Video List</h2>
+
+<div class="video-link">
+<a href="https://youtube.com/shorts/5OJuOXn3Ccc?si=IVEhG8NU2v0-3PbR" target="_blank">
+▶ Video 01 – Click to Watch
+</a>
+</div>
+
+<div class="video-link">
+<a href="https://youtube.com/shorts/8eWu1pCGBq8?si=4clKuO83dczwwaIr" target="_blank">
+▶ Video 02 – Click to Watch
+</a>
+</div>
+
+<div class="video-link">
+<a href="https://youtu.be/VIDEO_LINK_3" target="_blank">
+▶ Video 03 – Click to Watch
+</a>
+</div>
+
+<div class="video-link">
+<a href="https://youtu.be/VIDEO_LINK_4" target="_blank">
+▶ Video 04 – Click to Watch
+</a>
+</div>
+
+<div class="video-link">
+<a href="https://youtu.be/VIDEO_LINK_5" target="_blank">
+▶ Video 05 – Click to Watch
+</a>
+</div>
+
+</div>
+
+<script>
+function login(){
+  var p=document.getElementById("pass").value;
+  if(p==="1234"){
+    document.getElementById("loginBox").style.display="none";
+    document.getElementById("videos").style.display="block";
+  }else{
+    document.getElementById("error").innerHTML="Wrong Password!";
+  }
+}
+</script>
+
+</body>
+</html>
